@@ -24,6 +24,12 @@ public:
   int **get_matriks() { return matriks; }
   void set_matriks(int **matriks) { this->matriks = matriks; }
 
+  int get_dimensi_x() { return dimensi_x; }
+  void set_dimensi_x(int x) { this->dimensi_x = x; }
+
+  int get_dimensi_y() { return dimensi_y; }
+  void set_dimensi_y(int y) { this->dimensi_y = y; }
+
   // Methods
   void init_acak(int nilai_maks = 9) {
     matriks = new int *[dimensi_y];
