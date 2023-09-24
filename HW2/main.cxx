@@ -1,6 +1,7 @@
 #include <iostream>
 
-#include "./lib/Matriks.cxx"
+#include "Matriks.hxx"
+#include "penjumlahan_matrkis.cxx"
 
 int main() {
   int dimensi_x, dimensi_y;
