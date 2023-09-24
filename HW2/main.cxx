@@ -2,15 +2,20 @@
 
 #include "./lib/Matriks.cxx"
 
-int main(int argc, char *argv[]) {
-  // int dimensi_x;
-  // int dimensi_y;
-  // std::cout << "Masukan dimensi x dan y matriks a, dengan pemisah spasi: ";
-  // std::cin >> dimensi_x >> dimensi_y;
+int main() {
+  int dimensi_x, dimensi_y;
+  std::cout << "Masukan dimensi x dan y matriks dengan pemisah spasi: ";
+  std::cin >> dimensi_x >> dimensi_y;
 
-  Matriks matriks_a = Matriks(3, 3);
+  Matriks matriks_a = Matriks(dimensi_x, dimensi_y);
   matriks_a.init_acak();
+  std::cout << "Matriks A\n";
   matriks_a.print();
+
+  Matriks matriks_b = Matriks(dimensi_x, dimensi_y);
+  matriks_b.init_acak();
+  std::cout << "Matriks B\n";
+  matriks_b.print();
 
   return 0;
 }

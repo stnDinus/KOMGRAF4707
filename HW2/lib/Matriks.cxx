@@ -6,22 +6,33 @@ class Matriks {
   int dimensi_x, dimensi_y, **matriks;
 
 public:
+  // Constructors
   Matriks(int dimensi_x, int dimensi_y) {
     this->dimensi_x = dimensi_x;
     this->dimensi_y = dimensi_y;
   };
 
+  // Destructor
+  ~Matriks() {
+    for (int y = 0; y < dimensi_y; y++) {
+      delete[] matriks[y];
+    }
+    delete[] matriks;
+  }
+
+  // Getters & Setters
+  int **get_matriks() { return matriks; }
+  void set_matriks(int **matriks) { this->matriks = matriks; }
+
+  // Methods
   void init_acak(int nilai_maks = 9) {
-    *matriks = new int[dimensi_y];
+    matriks = new int *[dimensi_y];
 
     for (int y = 0; y < dimensi_y; y++) {
-
-      int *matriks_x = new int[dimensi_x];
+      matriks[y] = new int[dimensi_x];
       for (int x = 0; x < dimensi_x; x++) {
-        matriks_x[x] = new_rand(nilai_maks);
+        matriks[y][x] = new_rand(nilai_maks);
       }
-
-      matriks[y] = matriks_x;
     }
   }
 
