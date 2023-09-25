@@ -2,6 +2,7 @@
 
 #include "Matriks.hxx"
 #include "penjumlahan_matrkis.cxx"
+#include "pengurangan_matriks.cxx"
 
 int main() {
   int dimensi_x, dimensi_y;
@@ -18,9 +19,15 @@ int main() {
   std::cout << "Matriks B\n";
   matriks_b.print();
 
+  // PENJUMLAHAN
   std::cout << "Matriks Hasil Penjumlahan\n";
   Matriks matriks_hasil_penjumlahan = tambah_matriks(&matriks_a, &matriks_b);
   matriks_hasil_penjumlahan.print();
+
+  // PENGURANGAN
+  std::cout << "Matriks Hasil Pengurangan\n";
+  Matriks matriks_hasil_pengurangan = kurang_matriks(&matriks_hasil_penjumlahan, &matriks_b);
+  matriks_hasil_pengurangan.print();
 
   return 0;
 }
