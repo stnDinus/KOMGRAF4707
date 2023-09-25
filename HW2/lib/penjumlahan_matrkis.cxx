@@ -1,25 +1,30 @@
 #include "Matriks.hxx"
 
 /**
- * Menjumlahkan 2 buah input matriks !!DENGAN DIMENSI YANG SAMA yang berupa
- * sebuah array 2 dimensi
- * @param {int} dimensi_x - dimensi x kedua array
- * @param {int} dimensi_y - dimensi y kedua array
- * @param {int*} matriks_a - matriks pertama
- * @param {int*} matriks_b - matriks kedua
- * @returns {int**} matriks hasil penjumlahan
+ * Menjumlahkan 2 buah input Matriks !!DENGAN DIMENSI YANG SAMA
+ * @param {Matriks *} matriks_a - matriks pertama
+ * @param {Matriks *} matriks_b - matriks kedua
+ * @returns {Matriks} matriks hasil penjumlahan
  */
-int **tambah_matriks(int dimensi_x, int dimensi_y, int **matriks_a,
-                     int **matriks_b) {
-  int *matriks_hasil[dimensi_y];
+Matriks tambah_matriks(Matriks *matriks_a, Matriks *matriks_b) {
+  int dimensi_x = matriks_a->get_dimensi_x();
+  int dimensi_y = matriks_a->get_dimensi_y();
 
-  for (int y = 0; y < dimensi_y; y++) {
-    int matriks_x[dimensi_x];
-    for (int x = 0; x < dimensi_x; y++) {
-      matriks_x[x] = matriks_a[x][y] + matriks_b[x][y];
+  Matriks matriks_hasil = Matriks(dimensi_x, dimensi_y);
+
+  int **arr_2d_matriks_hasil = matriks_hasil.get_arr_2d();
+
+  for (int y = 0; y < matriks_a->get_dimensi_y(); y++) {
+    int *matriks_hasil_x = new int[dimensi_x];
+
+    for (int x = 0; x < dimensi_x; x++) {
+      int nilai_a = matriks_a->get_elemen_at(x, y);
+      int nilai_b = matriks_b->get_elemen_at(x, y);
+
+      matriks_hasil_x[x] = nilai_a + nilai_b;
     }
-    matriks_hasil[y] = matriks_x;
-  }
 
+    arr_2d_matriks_hasil[y] = matriks_hasil_x;
+  }
   return matriks_hasil;
 }

@@ -4,19 +4,24 @@
 Matriks::Matriks(int dimensi_x, int dimensi_y) {
   this->dimensi_x = dimensi_x;
   this->dimensi_y = dimensi_y;
+  this->arr_2d = new int *[dimensi_y];
+
+  for (int y = 0; y < dimensi_y; y++) {
+    this->arr_2d[y] = new int[dimensi_x];
+  }
 };
 
 // Destructor
 Matriks::~Matriks() {
   for (int y = 0; y < dimensi_y; y++) {
-    delete[] matriks[y];
+    delete[] arr_2d[y];
   }
-  delete[] matriks;
+  delete[] arr_2d;
 }
 
 // Getters & Setters
-int **Matriks::get_matriks() { return matriks; }
-void Matriks::set_matriks(int **matriks) { this->matriks = matriks; }
+int **Matriks::get_arr_2d() { return arr_2d; }
+void Matriks::set_arr_2d(int **matriks) { this->arr_2d = matriks; }
 
 int Matriks::get_dimensi_x() { return dimensi_x; }
 void Matriks::set_dimensi_x(int x) { this->dimensi_x = x; }
@@ -24,14 +29,14 @@ void Matriks::set_dimensi_x(int x) { this->dimensi_x = x; }
 int Matriks::get_dimensi_y() { return dimensi_y; }
 void Matriks::set_dimensi_y(int y) { this->dimensi_y = y; }
 
+int Matriks::get_elemen_at(int x, int y) { return arr_2d[y][x]; };
+
 // Methods
 void Matriks::init_acak(int nilai_maks) {
-  matriks = new int *[dimensi_y];
-
   for (int y = 0; y < dimensi_y; y++) {
-    matriks[y] = new int[dimensi_x];
+    arr_2d[y] = new int[dimensi_x];
     for (int x = 0; x < dimensi_x; x++) {
-      matriks[y][x] = new_rand(nilai_maks);
+      arr_2d[y][x] = new_rand(nilai_maks);
     }
   }
 }
@@ -41,7 +46,7 @@ void Matriks::print() {
     std::cout << "│ ";
 
     for (int x = 0; x < dimensi_x; x++)
-      std::cout << matriks[y][x] << " ";
+      std::cout << arr_2d[y][x] << " ";
 
     std::cout << "│\n";
   }

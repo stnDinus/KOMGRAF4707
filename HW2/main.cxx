@@ -18,5 +18,9 @@ int main() {
   std::cout << "Matriks B\n";
   matriks_b.print();
 
+  std::cout << "Matriks Hasil Penjumlahan\n";
+  Matriks matriks_hasil_penjumlahan = tambah_matriks(&matriks_a, &matriks_b);
+  matriks_hasil_penjumlahan.print();
+
   return 0;
 }
