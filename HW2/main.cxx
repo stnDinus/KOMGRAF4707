@@ -3,6 +3,7 @@
 #include "Matriks.hxx"
 #include "penjumlahan_matrkis.cxx"
 #include "pengurangan_matriks.cxx"
+#include "perkalian_matriks.cxx"
 
 int main() {
   int dimensi_x, dimensi_y;
@@ -28,6 +29,11 @@ int main() {
   std::cout << "Matriks Hasil Pengurangan\n";
   Matriks matriks_hasil_pengurangan = kurang_matriks(&matriks_hasil_penjumlahan, &matriks_b);
   matriks_hasil_pengurangan.print();
+
+  // PERKALIAN
+  std::cout << "Matriks Hasil Perkalian\n";
+  Matriks matriks_hasil_perkalian = kali_matriks(&matriks_a, &matriks_b);
+  matriks_hasil_perkalian.print();
 
   return 0;
 }
