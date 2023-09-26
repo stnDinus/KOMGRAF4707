@@ -8,10 +8,10 @@
  * @returns {Matriks} matriks hasil perkalian
  */
 Matriks kali_matriks(Matriks *matriks_a, Matriks *matriks_b) {
-  int dimensi_x = matriks_a->get_dimensi_y();
-  int dimensi_y = matriks_a->get_dimensi_x();
+  int dimensi_y = matriks_a->get_dimensi_y();
+  int dimensi_x = matriks_b->get_dimensi_x();
 
-  Matriks matriks_hasil = Matriks(dimensi_x, dimensi_y);
+  Matriks matriks_hasil = Matriks(dimensi_y, dimensi_x);
 
   int **arr_2d_matriks_hasil = matriks_hasil.get_arr_2d();
 
