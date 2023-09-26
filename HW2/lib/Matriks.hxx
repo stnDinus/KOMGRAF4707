@@ -8,7 +8,7 @@ class Matriks {
 
 public:
   // Constructors
-  Matriks(int dimensi_x, int dimensi_y);
+  Matriks(int dimensi_y, int dimensi_x);
 
   // Destructor
   ~Matriks();
@@ -17,13 +17,13 @@ public:
   int **get_arr_2d();
   void set_arr_2d(int **matriks);
 
-  int get_dimensi_x();
-  void set_dimensi_x(int x);
-
   int get_dimensi_y();
   void set_dimensi_y(int y);
 
-  int get_elemen_at(int x, int y);
+  int get_dimensi_x();
+  void set_dimensi_x(int x);
+
+  int get_elemen_at(int y, int x);
 
   // Methods
   void init_acak(int nilai_maks = 9);
