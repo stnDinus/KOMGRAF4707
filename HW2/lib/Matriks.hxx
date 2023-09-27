@@ -1,7 +1,7 @@
 #pragma once
 
-#include <iostream>
 #include "new_rand.hxx"
+#include <iostream>
 
 class Matriks {
   int dimensi_x, dimensi_y, **arr_2d;
@@ -23,7 +23,7 @@ public:
   int get_dimensi_x();
   void set_dimensi_x(int x);
 
-  int get_elemen_at(int y, int x);
+  int get_elemen(int y, int x);
 
   // Methods
   void init_acak(int nilai_maks = 9);

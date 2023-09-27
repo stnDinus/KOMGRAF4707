@@ -18,8 +18,8 @@ Matriks kurang_matriks(Matriks *matriks_a, Matriks *matriks_b) {
     int *matriks_hasil_x = new int[dimensi_x];
 
     for (int x = 0; x < dimensi_x; x++) {
-      int nilai_a = matriks_a->get_elemen_at(y, x);
-      int nilai_b = matriks_b->get_elemen_at(y, x);
+      int nilai_a = matriks_a->get_elemen(y, x);
+      int nilai_b = matriks_b->get_elemen(y, x);
 
       matriks_hasil_x[x] = nilai_a - nilai_b;
     }

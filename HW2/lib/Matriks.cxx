@@ -29,7 +29,7 @@ void Matriks::set_dimensi_y(int y) { this->dimensi_y = y; }
 int Matriks::get_dimensi_x() { return dimensi_x; }
 void Matriks::set_dimensi_x(int x) { this->dimensi_x = x; }
 
-int Matriks::get_elemen_at(int y, int x) { return arr_2d[y][x]; };
+int Matriks::get_elemen(int y, int x) { return arr_2d[y][x]; };
 
 // Methods
 void Matriks::init_acak(int nilai_maks) {
