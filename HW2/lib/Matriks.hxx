@@ -24,6 +24,7 @@ public:
   void set_dimensi_x(int x);
 
   int get_elemen(int y, int x);
+  void set_elemen(int y, int x, int e);
 
   // Methods
   void init_acak(int nilai_maks = 9);
