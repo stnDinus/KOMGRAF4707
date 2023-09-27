@@ -1,8 +1,9 @@
 #include <iostream>
 
 #include "Matriks.hxx"
-#include "penjumlahan_matrkis.cxx"
+#include "invert_matriks.cxx"
 #include "pengurangan_matriks.cxx"
+#include "penjumlahan_matrkis.cxx"
 #include "perkalian_matriks.cxx"
 
 int main() {
@@ -31,13 +32,20 @@ int main() {
 
   // PENGURANGAN
   std::cout << "Matriks Hasil Pengurangan\n";
-  Matriks matriks_hasil_pengurangan = kurang_matriks(&matriks_hasil_penjumlahan, &matriks_b);
+  Matriks matriks_hasil_pengurangan =
+      kurang_matriks(&matriks_hasil_penjumlahan, &matriks_b);
   matriks_hasil_pengurangan.print();
 
   // PERKALIAN
   std::cout << "Matriks Hasil Perkalian\n";
   Matriks matriks_hasil_perkalian = kali_matriks(&matriks_a, &matriks_b);
   matriks_hasil_perkalian.print();
+
+  // PEMBAGIAN
+  std::cout << "Matriks Hasil Pembagian\n";
+  Matriks matriks_b_invers = invert_matriks(&matriks_b);
+  Matriks matriks_hasil_pembagian = kali_matriks(&matriks_a, &matriks_b_invers);
+  matriks_hasil_pembagian.print();
 
   return 0;
 }
