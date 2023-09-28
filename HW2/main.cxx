@@ -1,10 +1,6 @@
 #include <iostream>
 
 #include "Matriks.hxx"
-#include "invert_matriks.cxx"
-#include "pengurangan_matriks.cxx"
-#include "penjumlahan_matrkis.cxx"
-#include "perkalian_matriks.cxx"
 
 int main() {
   int dimensi_x_a, dimensi_y_a;

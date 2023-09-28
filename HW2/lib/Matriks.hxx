@@ -31,3 +31,37 @@ public:
 
   void print();
 };
+
+/**
+ * Menjumlahkan 2 buah input Matriks !!DENGAN DIMENSI YANG SAMA
+ * @param {Matriks *} matriks_a - matriks pertama
+ * @param {Matriks *} matriks_b - matriks kedua
+ * @returns {Matriks} matriks hasil penjumlahan
+ */
+Matriks tambah_matriks(Matriks *matriks_a, Matriks *matriks_b);
+
+/**
+ * Mengurangkan 2 buah input Matriks !!DENGAN DIMENSI YANG SAMA
+ * @param {Matriks *} matriks_a - matriks pertama
+ * @param {Matriks *} matriks_b - matriks kedua
+ * @returns {Matriks} matriks hasil pengurangan
+ */
+Matriks kurang_matriks(Matriks *matriks_a, Matriks *matriks_b);
+
+/**
+ * Mengalikan 2 buah input Matriks !!DENGAN DIMENSI X MATRIKS A YANG SAMA DENGAN
+ * DIMENSI Y MATRIKS B
+ * @param {Matriks *} matriks_a - matriks pertama
+ * @param {Matriks *} matriks_b - matriks kedua
+ * @returns {Matriks} matriks hasil perkalian
+ */
+Matriks kali_matriks(Matriks *matriks_a, Matriks *matriks_b);
+
+/**
+ * Mengembalikan matriks baru hasil invers dari matriks input, jika matriks
+ * tidak memiliki invers, hentikan program dengan kode error 1
+ * @todo convert int -> double
+ * @params {Matriks *} input - matriks input !! DENGAN DIMENSI 2x2
+ * @returns {Matriks} invers dari matriks input
+ */
+Matriks invert_matriks(Matriks *input);

@@ -1,12 +1,5 @@
 #include "Matriks.hxx"
 
-/**
- * Mengalikan 2 buah input Matriks !!DENGAN DIMENSI X MATRIKS A YANG SAMA DENGAN
- * DIMENSI Y MATRIKS B
- * @param {Matriks *} matriks_a - matriks pertama
- * @param {Matriks *} matriks_b - matriks kedua
- * @returns {Matriks} matriks hasil perkalian
- */
 Matriks kali_matriks(Matriks *matriks_a, Matriks *matriks_b) {
   int dimensi_y = matriks_a->get_dimensi_y();
   int dimensi_x = matriks_b->get_dimensi_x();

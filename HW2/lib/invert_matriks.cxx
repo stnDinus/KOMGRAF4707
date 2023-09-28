@@ -1,12 +1,5 @@
 #include "Matriks.hxx"
 
-/**
- * Mengembalikan matriks baru hasil invers dari matriks input, jika matriks
- * tidak memiliki invers, hentikan program dengan kode error 1
- * @todo convert int -> double
- * @params {Matriks *} input - matriks input !! DENGAN DIMENSI 2x2
- * @returns {Matriks} invers dari matriks input
- */
 Matriks invert_matriks(Matriks *input) {
   double determinan = 1. / (input->get_elemen(0, 0) * input->get_elemen(1, 1) -
                             input->get_elemen(0, 1) * input->get_elemen(1, 0));

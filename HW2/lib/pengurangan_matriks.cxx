@@ -1,11 +1,5 @@
 #include "Matriks.hxx"
 
-/**
- * Mengurangkan 2 buah input Matriks !!DENGAN DIMENSI YANG SAMA
- * @param {Matriks *} matriks_a - matriks pertama
- * @param {Matriks *} matriks_b - matriks kedua
- * @returns {Matriks} matriks hasil pengurangan
- */
 Matriks kurang_matriks(Matriks *matriks_a, Matriks *matriks_b) {
   int dimensi_x = matriks_a->get_dimensi_x();
   int dimensi_y = matriks_a->get_dimensi_y();
