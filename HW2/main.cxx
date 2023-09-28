@@ -23,24 +23,23 @@ int main() {
 
   // PENJUMLAHAN
   std::cout << "Matriks Hasil Penjumlahan\n";
-  Matriks matriks_hasil_penjumlahan = tambah_matriks(&matriks_a, &matriks_b);
+  Matriks matriks_hasil_penjumlahan = matriks_a + matriks_b;
   matriks_hasil_penjumlahan.print();
 
   // PENGURANGAN
   std::cout << "Matriks Hasil Pengurangan\n";
-  Matriks matriks_hasil_pengurangan =
-      kurang_matriks(&matriks_hasil_penjumlahan, &matriks_b);
+  Matriks matriks_hasil_pengurangan = matriks_hasil_penjumlahan - matriks_b;
   matriks_hasil_pengurangan.print();
 
   // PERKALIAN
   std::cout << "Matriks Hasil Perkalian\n";
-  Matriks matriks_hasil_perkalian = kali_matriks(&matriks_a, &matriks_b);
+  Matriks matriks_hasil_perkalian = matriks_a * matriks_b;
   matriks_hasil_perkalian.print();
 
   // PEMBAGIAN
   std::cout << "Matriks Hasil Pembagian\n";
-  Matriks matriks_b_invers = invert_matriks(&matriks_b);
-  Matriks matriks_hasil_pembagian = kali_matriks(&matriks_a, &matriks_b_invers);
+  Matriks matriks_b_invers = !matriks_b;
+  Matriks matriks_hasil_pembagian = matriks_a * matriks_b_invers;
   matriks_hasil_pembagian.print();
 
   return 0;

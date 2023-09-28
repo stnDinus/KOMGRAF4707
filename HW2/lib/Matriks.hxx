@@ -29,6 +29,12 @@ public:
   // Methods
   void init_acak(int nilai_maks = 9);
 
+  // Operator Overloads
+  Matriks operator+(Matriks &matriks_b);
+  Matriks operator-(Matriks &matriks_b);
+  Matriks operator*(Matriks &matriks_b);
+  Matriks operator!();
+
   void print();
 };
 

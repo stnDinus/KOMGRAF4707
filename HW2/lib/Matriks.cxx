@@ -52,3 +52,20 @@ void Matriks::print() {
     std::cout << "│\n";
   }
 }
+
+// Operator Overloads
+Matriks Matriks::operator+(Matriks &matriks_b) {
+  return tambah_matriks(this, &matriks_b);
+}
+
+Matriks Matriks::operator-(Matriks &matriks_b) {
+  return kurang_matriks(this, &matriks_b);
+}
+
+Matriks Matriks::operator*(Matriks &matriks_b) {
+  return kali_matriks(this, &matriks_b);
+}
+
+Matriks Matriks::operator!() {
+  return invert_matriks(this);
+}
