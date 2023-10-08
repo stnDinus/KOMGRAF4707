@@ -6,9 +6,9 @@ project(HW2)
 
 add_executable(HW2 main.cxx)
 
-target_include_directories(HW2 PUBLIC "${PROJECT_SOURCE_DIR}/lib")
+target_include_directories(HW2 PUBLIC ../common/)
 
-add_subdirectory(lib)
+add_subdirectory(../common ./common)
 
 target_link_libraries(HW2 Matriks)
 target_link_libraries(HW2 new_rand)
