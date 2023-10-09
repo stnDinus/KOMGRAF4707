@@ -4,7 +4,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 project(HW3)
 
-add_executable(HW3 main.cxx)
+add_executable(HW3 main.cxx lib/dda.cxx)
 
 # custom libs
 target_include_directories(HW3 PUBLIC ../common/)
