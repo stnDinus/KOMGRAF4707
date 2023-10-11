@@ -4,15 +4,14 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 project(HW3)
 
-add_executable(HW3 main.cxx lib/dda.cxx)
+add_executable(HW3 main.cxx lib/dda.cxx lib/draw_points.cxx)
 
 # custom libs
 target_include_directories(HW3 PUBLIC ../common/)
 
 add_subdirectory(../common ./common)
 
-target_link_libraries(HW3 Matriks)
-target_link_libraries(HW3 new_rand)
+target_link_libraries(HW3 loadShaders)
 
 # system libs
 find_package(glfw3 REQUIRED)
