@@ -1,5 +1,5 @@
 #include "lib/dda.hxx"
-#include "lib/draw_points.hxx"
+#include "draw_points.hxx"
 
 using namespace std;
 
