@@ -35,7 +35,6 @@ void Matriks::set_elemen(int y, int x, int e) { arr_2d[y][x] = e; };
 // Methods
 void Matriks::init_acak(int nilai_maks) {
   for (int y = 0; y < dimensi_y; y++) {
-    arr_2d[y] = new int[dimensi_x];
     for (int x = 0; x < dimensi_x; x++) {
       arr_2d[y][x] = new_rand(nilai_maks);
     }
