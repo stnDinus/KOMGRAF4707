@@ -4,9 +4,8 @@
 #include <iostream>
 
 class Matriks {
-  int dimensi_x, dimensi_y, **arr_2d;
-
 public:
+  int dimensi_x, dimensi_y, **arr_2d;
   // Constructors
   Matriks(int dimensi_y, int dimensi_x);
 
@@ -33,9 +32,29 @@ public:
   Matriks operator+(Matriks &matriks_b);
   Matriks operator-(Matriks &matriks_b);
   Matriks operator*(Matriks &matriks_b);
-  Matriks operator!();
 
   void print();
+};
+
+class Matriks2d : public Matriks {
+public:
+  // Constructors
+  Matriks2d(int dimensi_x);
+
+  // Destructor
+  ~Matriks2d();
+};
+
+class Matriks2x2 : public Matriks2d {
+public:
+  // Constructors
+  Matriks2x2();
+
+  // Destructor
+  ~Matriks2x2();
+
+  // Operator Overloads
+  Matriks2x2 operator!();
 };
 
 /**
@@ -70,4 +89,4 @@ Matriks kali_matriks(Matriks *matriks_a, Matriks *matriks_b);
  * @params {Matriks *} input - matriks input !! DENGAN DIMENSI 2x2
  * @returns {Matriks} invers dari matriks input
  */
-Matriks invert_matriks(Matriks *input);
+Matriks2x2 invert_matriks(Matriks2x2 *input);

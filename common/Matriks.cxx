@@ -11,6 +11,10 @@ Matriks::Matriks(int dimensi_y, int dimensi_x) {
   }
 };
 
+Matriks2d::Matriks2d(int dimensi_x) : Matriks(2, dimensi_x){};
+
+Matriks2x2::Matriks2x2() : Matriks2d(2){};
+
 // Destructor
 Matriks::~Matriks() {
   for (int y = 0; y < dimensi_y; y++) {
@@ -18,6 +22,10 @@ Matriks::~Matriks() {
   }
   delete[] arr_2d;
 }
+
+Matriks2d::~Matriks2d(){};
+
+Matriks2x2::~Matriks2x2(){};
 
 // Getters & Setters
 int **Matriks::get_arr_2d() { return arr_2d; }
@@ -65,6 +73,4 @@ Matriks Matriks::operator*(Matriks &matriks_b) {
   return kali_matriks(this, &matriks_b);
 }
 
-Matriks Matriks::operator!() {
-  return invert_matriks(this);
-}
+Matriks2x2 Matriks2x2::operator!() { return invert_matriks(this); }

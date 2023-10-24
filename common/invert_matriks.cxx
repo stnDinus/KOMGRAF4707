@@ -1,6 +1,6 @@
 #include "Matriks.hxx"
 
-Matriks invert_matriks(Matriks *input) {
+Matriks2x2 invert_matriks(Matriks2x2 *input) {
   double determinan = 1. / (input->get_elemen(0, 0) * input->get_elemen(1, 1) -
                             input->get_elemen(0, 1) * input->get_elemen(1, 0));
 
@@ -9,7 +9,7 @@ Matriks invert_matriks(Matriks *input) {
     exit(1);
   }
 
-  Matriks matriks_hasil = Matriks(2, 2);
+  Matriks2x2 matriks_hasil = Matriks2x2();
 
   matriks_hasil.set_elemen(0, 0, determinan * input->get_elemen(1, 1));
   matriks_hasil.set_elemen(0, 1, determinan * input->get_elemen(0, 1) * -1);
