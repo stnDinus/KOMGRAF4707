@@ -57,7 +57,7 @@ void Matriks::print() {
 void Matriks::translasi_matriks(int arr_penambah[], int n) {
   for (int y = 0; y < this->dimensi_y; y++) {
     for (int x = 0; x < n; x++) {
-      arr_2d[y][x] += arr_penambah[x];
+      arr_2d[y][x] += arr_penambah[y];
     }
   }
 }
