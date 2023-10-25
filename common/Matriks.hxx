@@ -42,9 +42,6 @@ public:
   // Constructors
   Matriks2x2();
 
-  // Destructor
-  ~Matriks2x2();
-
   // Operator Overloads
   Matriks2x2 operator!();
 };

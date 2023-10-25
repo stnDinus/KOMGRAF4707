@@ -21,8 +21,6 @@ Matriks::~Matriks() {
   delete[] arr_2d;
 }
 
-Matriks2x2::~Matriks2x2(){};
-
 // Getters & Setters
 int **Matriks::get_arr_2d() { return arr_2d; }
 void Matriks::set_arr_2d(int **matriks) { this->arr_2d = matriks; }
