@@ -11,9 +11,7 @@ Matriks::Matriks(int dimensi_y, int dimensi_x) {
   }
 };
 
-Matriks2d::Matriks2d(int dimensi_x) : Matriks(2, dimensi_x){};
-
-Matriks2x2::Matriks2x2() : Matriks2d(2){};
+Matriks2x2::Matriks2x2() : Matriks(2, 2){};
 
 // Destructor
 Matriks::~Matriks() {
@@ -22,8 +20,6 @@ Matriks::~Matriks() {
   }
   delete[] arr_2d;
 }
-
-Matriks2d::~Matriks2d(){};
 
 Matriks2x2::~Matriks2x2(){};
 
@@ -60,7 +56,7 @@ void Matriks::print() {
   }
 }
 
-void Matriks2d::translasi_matriks(int arr_penambah[], int n) {
+void Matriks::translasi_matriks(int arr_penambah[], int n) {
   for (int y = 0; y < this->dimensi_y; y++) {
     for (int x = 0; x < n; x++) {
       arr_2d[y][x] += arr_penambah[x];

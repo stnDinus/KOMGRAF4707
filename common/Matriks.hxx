@@ -27,6 +27,7 @@ public:
 
   // Methods
   void init_acak(int nilai_maks = 9);
+  void translasi_matriks(int arr_penambah[], int n);
 
   void print();
 
@@ -36,19 +37,7 @@ public:
   Matriks operator*(Matriks &matriks_b);
 };
 
-class Matriks2d : public Matriks {
-public:
-  // Constructors
-  Matriks2d(int dimensi_x);
-
-  // Methods
-  void translasi_matriks(int arr_penambah[], int n);
-
-  // Destructor
-  ~Matriks2d();
-};
-
-class Matriks2x2 : public Matriks2d {
+class Matriks2x2 : public Matriks {
 public:
   // Constructors
   Matriks2x2();
