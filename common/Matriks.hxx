@@ -28,18 +28,21 @@ public:
   // Methods
   void init_acak(int nilai_maks = 9);
 
+  void print();
+
   // Operator Overloads
   Matriks operator+(Matriks &matriks_b);
   Matriks operator-(Matriks &matriks_b);
   Matriks operator*(Matriks &matriks_b);
-
-  void print();
 };
 
 class Matriks2d : public Matriks {
 public:
   // Constructors
   Matriks2d(int dimensi_x);
+
+  // Methods
+  void translasi_matriks(int arr_penambah[], int n);
 
   // Destructor
   ~Matriks2d();

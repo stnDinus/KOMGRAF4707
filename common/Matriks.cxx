@@ -60,6 +60,14 @@ void Matriks::print() {
   }
 }
 
+void Matriks2d::translasi_matriks(int arr_penambah[], int n) {
+  for (int y = 0; y < this->dimensi_y; y++) {
+    for (int x = 0; x < n; x++) {
+      arr_2d[y][x] += arr_penambah[x];
+    }
+  }
+}
+
 // Operator Overloads
 Matriks Matriks::operator+(Matriks &matriks_b) {
   return tambah_matriks(this, &matriks_b);
