@@ -27,7 +27,7 @@ public:
 
   // Methods
   void init_acak(int nilai_maks = 9);
-  void translasi_matriks(int arr_penambah[], int n);
+  void translate_matriks(int arr_penambah[], int n);
 
   void print();
 

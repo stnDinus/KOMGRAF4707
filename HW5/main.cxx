@@ -20,8 +20,8 @@ int main(int argc, char *argv[]) {
   cout << endl;
 
   int arr_penambah[] = {5, 10};
-  A.translasi_matriks(arr_penambah, 2);
-  B.translasi_matriks(arr_penambah, 2);
+  A.translate_matriks(arr_penambah, 2);
+  B.translate_matriks(arr_penambah, 2);
 
   cout << "Translasi(5, 10)\n";
   cout << "Matriks A\n";
