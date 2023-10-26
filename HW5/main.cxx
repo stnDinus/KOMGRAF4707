@@ -29,4 +29,14 @@ int main(int argc, char *argv[]) {
   cout << "Matriks B\n";
   B.print();
   cout << endl;
+
+  Matriks A_scaled = A.scale_matriks_2d(2, 2);
+  Matriks B_scaled = B.scale_matriks_2d(2, 2);
+
+  cout << "Scale(5, 10)\n";
+  cout << "Matriks A\n";
+  A_scaled.print();
+  cout << "Matriks B\n";
+  B_scaled.print();
+  cout << endl;
 }

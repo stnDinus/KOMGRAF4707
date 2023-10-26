@@ -62,6 +62,16 @@ void Matriks::translate_matriks(int arr_penambah[], int n) {
   }
 }
 
+Matriks Matriks::scale_matriks_2d(int x, int y) {
+  Matriks matriks_perkalian = Matriks(2, 2);
+  matriks_perkalian.set_elemen(0, 0, x);
+  matriks_perkalian.set_elemen(0, 1, 0);
+  matriks_perkalian.set_elemen(1, 0, 0);
+  matriks_perkalian.set_elemen(1, 1, y);
+
+  return matriks_perkalian * *this;
+}
+
 // Operator Overloads
 Matriks Matriks::operator+(Matriks &matriks_b) {
   return tambah_matriks(this, &matriks_b);

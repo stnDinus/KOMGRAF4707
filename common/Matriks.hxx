@@ -28,6 +28,7 @@ public:
   // Methods
   void init_acak(int nilai_maks = 9);
   void translate_matriks(int arr_penambah[], int n);
+  Matriks scale_matriks_2d(int x, int y);
 
   void print();
 
