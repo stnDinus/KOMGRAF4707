@@ -71,6 +71,15 @@ Matriks Matriks::scale_matriks_2d(int x, int y) {
 
   return matriks_perkalian * *this;
 }
+Matriks Matriks::rotate_matriks_2d(int deg) {
+  Matriks matriks_rotasi = Matriks(2, 2);
+  matriks_rotasi.set_elemen(0, 0, round(cos(deg)));
+  matriks_rotasi.set_elemen(0, 1, round(sin(deg)));
+  matriks_rotasi.set_elemen(1, 0, round(sin(deg)));
+  matriks_rotasi.set_elemen(1, 1, round(cos(deg)));
+
+  return matriks_rotasi * *this;
+};
 
 // Operator Overloads
 Matriks Matriks::operator+(Matriks &matriks_b) {

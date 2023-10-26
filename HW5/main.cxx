@@ -39,4 +39,14 @@ int main(int argc, char *argv[]) {
   cout << "Matriks B\n";
   B_scaled.print();
   cout << endl;
+
+  Matriks A_rotated = A.rotate_matriks_2d(20);
+  Matriks B_rotated = B.rotate_matriks_2d(20);
+
+  cout << "Rotate(20)\n";
+  cout << "Matriks A\n";
+  A_rotated.print();
+  cout << "Matriks B\n";
+  B_rotated.print();
+  cout << endl;
 }
