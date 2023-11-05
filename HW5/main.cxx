@@ -4,11 +4,11 @@
 using namespace std;
 int main(int argc, char *argv[]) {
   // A11.2022.14433
-  Matriks A = Matriks(2, 1);
+  Matriks A = Matriks<int>(2, 1);
   A.arr_2d[0][0] = 3;
   A.arr_2d[1][0] = 3;
 
-  Matriks B = Matriks(2, 1);
+  Matriks B = Matriks<int>(2, 1);
   B.arr_2d[0][0] = 4;
   B.arr_2d[1][0] = 4;
 

@@ -1,12 +1,13 @@
 #include "Matriks.hxx"
 
-Matriks kali_matriks(Matriks *matriks_a, Matriks *matriks_b) {
+template <typename T>
+Matriks<T> kali_matriks(Matriks<T> *matriks_a, Matriks<T> *matriks_b) {
   int dimensi_y = matriks_a->dimensi_y;
   int dimensi_x = matriks_b->dimensi_x;
 
-  Matriks matriks_hasil = Matriks(dimensi_y, dimensi_x);
+  Matriks matriks_hasil = Matriks<T>(dimensi_y, dimensi_x);
 
-  int **arr_2d_matriks_hasil = matriks_hasil.arr_2d;
+  T **arr_2d_matriks_hasil = matriks_hasil.arr_2d;
 
   for (int y = 0; y < dimensi_y; y++) {
     for (int x = 0; x < dimensi_x; x++) {
@@ -20,3 +21,7 @@ Matriks kali_matriks(Matriks *matriks_a, Matriks *matriks_b) {
 
   return matriks_hasil;
 }
+template Matriks<int> kali_matriks(Matriks<int> *matriks_a,
+                                   Matriks<int> *matriks_b);
+template Matriks<GLfloat> kali_matriks(Matriks<GLfloat> *matriks_a,
+                                       Matriks<GLfloat> *matriks_b);

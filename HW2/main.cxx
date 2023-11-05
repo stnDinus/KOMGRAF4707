@@ -3,12 +3,12 @@
 #include "Matriks.hxx"
 
 int main() {
-  Matriks2x2 matriks_a;
+  Matriks2x2<int> matriks_a;
   matriks_a.init_acak();
   std::cout << "Matriks A\n";
   matriks_a.print();
 
-  Matriks2x2 matriks_b;
+  Matriks2x2<int> matriks_b;
   matriks_b.init_acak();
   std::cout << "Matriks B\n";
   matriks_b.print();

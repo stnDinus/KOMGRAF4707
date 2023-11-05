@@ -1,12 +1,14 @@
 #pragma once
 
 #include "new_rand.hxx"
+#include <GL/gl.h>
 #include <iostream>
 #include <math.h>
 
-class Matriks {
+template <typename T> class Matriks {
 public:
-  int dimensi_x, dimensi_y, **arr_2d;
+  int dimensi_x, dimensi_y;
+  T **arr_2d;
   // Constructors
   Matriks(int dimensi_y, int dimensi_x);
 
@@ -22,12 +24,12 @@ public:
   void print();
 
   // Operator Overloads
-  Matriks operator+(Matriks &matriks_b);
-  Matriks operator-(Matriks &matriks_b);
-  Matriks operator*(Matriks &matriks_b);
+  Matriks<T> operator+(Matriks<T> &matriks_b);
+  Matriks<T> operator-(Matriks<T> &matriks_b);
+  Matriks<T> operator*(Matriks<T> &matriks_b);
 };
 
-class Matriks2x2 : public Matriks {
+template <typename T> class Matriks2x2 : public Matriks<T> {
 public:
   // Constructors
   Matriks2x2();
@@ -42,7 +44,8 @@ public:
  * @param {Matriks *} matriks_b - matriks kedua
  * @returns {Matriks} matriks hasil penjumlahan
  */
-Matriks tambah_matriks(Matriks *matriks_a, Matriks *matriks_b);
+template <typename T>
+Matriks<T> tambah_matriks(Matriks<T> *matriks_a, Matriks<T> *matriks_b);
 
 /**
  * Mengurangkan 2 buah input Matriks !!DENGAN DIMENSI YANG SAMA
@@ -50,7 +53,8 @@ Matriks tambah_matriks(Matriks *matriks_a, Matriks *matriks_b);
  * @param {Matriks *} matriks_b - matriks kedua
  * @returns {Matriks} matriks hasil pengurangan
  */
-Matriks kurang_matriks(Matriks *matriks_a, Matriks *matriks_b);
+template <typename T>
+Matriks<T> kurang_matriks(Matriks<T> *matriks_a, Matriks<T> *matriks_b);
 
 /**
  * Mengalikan 2 buah input Matriks !!DENGAN DIMENSI X MATRIKS A YANG SAMA DENGAN
@@ -59,7 +63,8 @@ Matriks kurang_matriks(Matriks *matriks_a, Matriks *matriks_b);
  * @param {Matriks *} matriks_b - matriks kedua
  * @returns {Matriks} matriks hasil perkalian
  */
-Matriks kali_matriks(Matriks *matriks_a, Matriks *matriks_b);
+template <typename T>
+Matriks<T> kali_matriks(Matriks<T> *matriks_a, Matriks<T> *matriks_b);
 
 /**
  * Mengembalikan matriks baru hasil invers dari matriks input, jika matriks
@@ -68,4 +73,4 @@ Matriks kali_matriks(Matriks *matriks_a, Matriks *matriks_b);
  * @params {Matriks *} input - matriks input !! DENGAN DIMENSI 2x2
  * @returns {Matriks} invers dari matriks input
  */
-Matriks2x2 invert_matriks(Matriks2x2 *input);
+template <typename T> Matriks2x2<T> invert_matriks(Matriks2x2<T> *input);
