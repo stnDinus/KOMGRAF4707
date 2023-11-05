@@ -5,12 +5,12 @@ using namespace std;
 int main(int argc, char *argv[]) {
   // A11.2022.14433
   Matriks A = Matriks(2, 1);
-  A.set_elemen(0, 0, 3);
-  A.set_elemen(1, 0, 3);
+  A.arr_2d[0][0] = 3;
+  A.arr_2d[1][0] = 3;
 
   Matriks B = Matriks(2, 1);
-  B.set_elemen(0, 0, 4);
-  B.set_elemen(1, 0, 4);
+  B.arr_2d[0][0] = 4;
+  B.arr_2d[1][0] = 4;
 
   cout << "Matriks Awal\n";
   cout << "Matriks A\n";

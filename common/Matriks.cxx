@@ -21,19 +21,6 @@ Matriks::~Matriks() {
   delete[] arr_2d;
 }
 
-// Getters & Setters
-int **Matriks::get_arr_2d() { return arr_2d; }
-void Matriks::set_arr_2d(int **matriks) { this->arr_2d = matriks; }
-
-int Matriks::get_dimensi_y() { return dimensi_y; }
-void Matriks::set_dimensi_y(int y) { this->dimensi_y = y; }
-
-int Matriks::get_dimensi_x() { return dimensi_x; }
-void Matriks::set_dimensi_x(int x) { this->dimensi_x = x; }
-
-int Matriks::get_elemen(int y, int x) { return arr_2d[y][x]; };
-void Matriks::set_elemen(int y, int x, int e) { arr_2d[y][x] = e; };
-
 // Methods
 void Matriks::init_acak(int nilai_maks) {
   for (int y = 0; y < dimensi_y; y++) {
@@ -64,19 +51,19 @@ void Matriks::translate_matriks(int arr_penambah[], int n) {
 
 Matriks Matriks::scale_matriks_2d(int x, int y) {
   Matriks matriks_perkalian = Matriks(2, 2);
-  matriks_perkalian.set_elemen(0, 0, x);
-  matriks_perkalian.set_elemen(0, 1, 0);
-  matriks_perkalian.set_elemen(1, 0, 0);
-  matriks_perkalian.set_elemen(1, 1, y);
+  matriks_perkalian.arr_2d[0][0] = x;
+  matriks_perkalian.arr_2d[0][1] = 0;
+  matriks_perkalian.arr_2d[1][0] = 0;
+  matriks_perkalian.arr_2d[1][1] = y;
 
   return matriks_perkalian * *this;
 }
 Matriks Matriks::rotate_matriks_2d(int deg) {
   Matriks matriks_rotasi = Matriks(2, 2);
-  matriks_rotasi.set_elemen(0, 0, round(cos(deg)));
-  matriks_rotasi.set_elemen(0, 1, round(sin(deg)));
-  matriks_rotasi.set_elemen(1, 0, round(sin(deg)));
-  matriks_rotasi.set_elemen(1, 1, round(cos(deg)));
+  matriks_rotasi.arr_2d[0][0] = round(cos(deg));
+  matriks_rotasi.arr_2d[0][1] = round(sin(deg));
+  matriks_rotasi.arr_2d[1][0] = round(sin(deg));
+  matriks_rotasi.arr_2d[1][1] = round(cos(deg));
 
   return matriks_rotasi * *this;
 };
