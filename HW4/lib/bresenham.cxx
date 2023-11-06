@@ -15,6 +15,7 @@ vector<float> bresenham(vector<float> titik_awal, vector<float> titik_akhir) {
   while (true) {
     return_vec.push_back(x0);
     return_vec.push_back(y0);
+    return_vec.push_back(1);
     if (x0 == x1 && y0 == y1)
       break;
     e2 = 2 * err;
