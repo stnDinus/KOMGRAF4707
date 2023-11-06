@@ -6,4 +6,4 @@
 #include <iostream>
 #include <vector>
 
-void draw_points(std::vector<GLfloat> points);
+void draw_points(std::vector<GLfloat> points, std::string title = "OpenGL");

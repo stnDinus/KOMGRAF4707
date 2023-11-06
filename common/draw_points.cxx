@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void draw_points(vector<GLfloat> points) {
+void draw_points(vector<GLfloat> points, string title) {
   // set steps = absolute max value int + 1
   int steps = 0;
   for (GLfloat i : points) {
@@ -78,7 +78,7 @@ void draw_points(vector<GLfloat> points) {
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
   glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
-  GLFWwindow *window = glfwCreateWindow(768, 768, "HW3", NULL, NULL);
+  GLFWwindow *window = glfwCreateWindow(768, 768, title.c_str(), NULL, NULL);
   if (window == NULL) {
     cerr << "GLFW gagal membuat window" << endl;
     glfwTerminate();
