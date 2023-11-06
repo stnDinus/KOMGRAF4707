@@ -43,8 +43,8 @@ template <typename T> std::vector<T> Matriks<T>::to_vec() {
 
 template <typename T> void Matriks<T>::from_vec(std::vector<T> vec) {
   int i = 0;
-  for (int y = 0; y < this->dimensi_y; y++) {
-    for (int x = 0; x < this->dimensi_x; x++) {
+  for (int x = 0; x < this->dimensi_x; x++) {
+    for (int y = 0; y < this->dimensi_y; y++) {
       this->arr_2d[y][x] = vec[i++];
     }
   }
@@ -64,9 +64,17 @@ template <typename T> void Matriks<T>::print() {
 template <typename T> Matriks<T> Matriks<T>::translate_matriks(T x, T y) {
   Matriks matriks_perkalian = Matriks(3, 3);
   matriks_perkalian.from_vec(std::vector<T>{
-      1, 0, x, //
-      0, 1, y, //
-      0, 0, 1, //
+      1, //
+      0, //
+      0, //
+
+      0, //
+      1, //
+      0, //
+
+      x, //
+      y, //
+      1, //
   });
   return matriks_perkalian * *this;
 }
@@ -74,9 +82,17 @@ template <typename T> Matriks<T> Matriks<T>::translate_matriks(T x, T y) {
 template <typename T> Matriks<T> Matriks<T>::scale_matriks_2d(T x, T y) {
   Matriks matriks_perkalian = Matriks(3, 3);
   matriks_perkalian.from_vec(std::vector<T>{
-      x, 0, 0, //
-      0, y, 0, //
-      0, 0, 1, //
+      x, //
+      0, //
+      0, //
+
+      0,
+      y, //
+      0, //
+
+      0, //
+      0, //
+      1, //
   });
   return matriks_perkalian * *this;
 }
@@ -84,9 +100,17 @@ template <typename T> Matriks<T> Matriks<T>::scale_matriks_2d(T x, T y) {
 template <typename T> Matriks<T> Matriks<T>::rotate_matriks_2d(T rad) {
   Matriks matriks_perkalian = Matriks(3, 3);
   matriks_perkalian.from_vec(std::vector<T>{
-      static_cast<T>(cos(rad)), static_cast<T>(sin(rad)) * -1, 0, //
-      static_cast<T>(sin(rad)), static_cast<T>(cos(rad)), 0,      //
-      0, 0, 1,                                                    //
+      static_cast<T>(cos(rad)), //
+      static_cast<T>(sin(rad)), //
+      0,                        //
+
+      static_cast<T>(sin(rad)) * -1, //
+      static_cast<T>(cos(rad)),      //
+      0,                             //
+
+      0, //
+      0, //
+      1, //
   });
   return matriks_perkalian * *this;
 };
