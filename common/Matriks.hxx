@@ -17,12 +17,13 @@ public:
 
   // Methods
   void init_acak(int nilai_maks = 9);
-  void translate_matriks(int arr_penambah[], int n);
-  Matriks scale_matriks_2d(int x, int y);
-  Matriks rotate_matriks_2d(int deg);
+  void from_vec(std::vector<T> vec);
   std::vector<T> to_vec();
-
   void print();
+  // untuk matriks posisi 2 dimensi + 1 dimensi homogen
+  Matriks translate_matriks(T x, T y);
+  Matriks scale_matriks_2d(T x, T y);
+  Matriks rotate_matriks_2d(T rad);
 
   // Operator Overloads
   Matriks<T> operator+(Matriks<T> &matriks_b);
