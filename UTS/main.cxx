@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
   dda_matriks.from_vec(dda_vec);
   cout << "1a) Koordinat-koordinat DDA" << endl;
   dda_matriks.print();
-  draw_points(dda_vec);
+  draw_points(dda_vec, "DDA");
 
   // 1b) bresenham
   std::vector<GLfloat> bresenham_vec = bresenham(a.to_vec(), b.to_vec());
@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
   bresenham_matriks.from_vec(bresenham_vec);
   cout << "1b) Koordinat-koordinat bresenham" << endl;
   bresenham_matriks.print();
-  draw_points(bresenham_vec);
+  draw_points(bresenham_vec, "Bresenham");
 
   // 2) transformasi matriks
   Matriks c = Matriks<GLfloat>(3, 2);
@@ -64,23 +64,23 @@ int main(int argc, char *argv[]) {
   cout << "\n2) Transformasi matriks\n"
        << "Matriks awal" << endl;
   c.print();
-  draw_points(c.to_vec());
+  draw_points(c.to_vec(), "Matriks awal");
 
   // 2.1) translasi
   Matriks c_translated = c.translate_matriks(args["-tx"], args["-ty"]);
   cout << "Translasi(" << args["-tx"] << ", " << args["-ty"] << ")" << endl;
   c_translated.print();
-  draw_points(c_translated.to_vec());
+  draw_points(c_translated.to_vec(), "Translasi");
 
   // 2.2) scaling
   Matriks c_scaled = c.scale_matriks_2d(args["-sx"], args["-sy"]);
   cout << "Scaling(" << args["-sx"] << ", " << args["-sy"] << ")" << endl;
   c_scaled.print();
-  draw_points(c_scaled.to_vec());
+  draw_points(c_scaled.to_vec(), "Scaling");
 
   // 2.3) rotasi
   Matriks c_rotated = c.rotate_matriks_2d(args["-rdeg"] * M_PI / 180);
   cout << "Scaling(" << args["-rdeg"] << ")" << endl;
   c_rotated.print();
-  draw_points(c_rotated.to_vec());
+  draw_points(c_rotated.to_vec(), "Rotasi");
 }
