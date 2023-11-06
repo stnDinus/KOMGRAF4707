@@ -70,6 +70,17 @@ template <typename T> Matriks<T> Matriks<T>::rotate_matriks_2d(int deg) {
   return matriks_rotasi * *this;
 };
 
+template <typename T> std::vector<T> Matriks<T>::to_vec() {
+  std::vector<T> return_vec(this->dimensi_x * this->dimensi_y);
+  int i = 0;
+  for (int x = 0; x < this->dimensi_x; x++) {
+    for (int y = 0; y < this->dimensi_y; y++) {
+      return_vec[i++] = this->arr_2d[y][x];
+    }
+  }
+  return return_vec;
+}
+
 // Operator Overloads
 template <typename T> Matriks<T> Matriks<T>::operator+(Matriks &matriks_b) {
   return tambah_matriks(this, &matriks_b);
