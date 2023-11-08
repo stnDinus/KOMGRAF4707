@@ -115,7 +115,7 @@ void draw_points(vector<GLfloat> points, string title) {
       loadShaders((string(shaders_dir) + "/VertexShader.glsl").c_str(),
                   (string(shaders_dir) + "/FragmentShader.glsl").c_str());
 
-  glPointSize(10);
+  glPointSize(768.0 / (steps + 1) / 2);
 
   do {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
