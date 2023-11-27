@@ -115,6 +115,63 @@ template <typename T> Matriks<T> Matriks<T>::rotate_matriks_2d(T rad) {
   return matriks_perkalian * *this;
 };
 
+template <typename T> Matriks<T> Matriks<T>::mirror_matriks_x() {
+  Matriks matriks_perkalian = Matriks(3, 3);
+  matriks_perkalian.from_vec(std::vector<T>{
+      1, //
+      0, //
+      0, //
+
+      0,  //
+      -1, //
+      0,  //
+
+      0, //
+      0, //
+      1, //
+  });
+
+  return matriks_perkalian * *this;
+}
+
+template <typename T> Matriks<T> Matriks<T>::mirror_matriks_y() {
+  Matriks matriks_perkalian = Matriks(3, 3);
+  matriks_perkalian.from_vec(std::vector<T>{
+      -1, //
+      0,  //
+      0,  //
+
+      0, //
+      1, //
+      0, //
+
+      0, //
+      0, //
+      1, //
+  });
+
+  return matriks_perkalian * *this;
+}
+
+template <typename T> Matriks<T> Matriks<T>::mirror_matriks_d() {
+  Matriks matriks_perkalian = Matriks(3, 3);
+  matriks_perkalian.from_vec(std::vector<T>{
+      0, //
+      1, //
+      0, //
+
+      1, //
+      0, //
+      0, //
+
+      0, //
+      0, //
+      1, //
+  });
+
+  return matriks_perkalian * *this;
+}
+
 // Operator Overloads
 template <typename T> Matriks<T> Matriks<T>::operator+(Matriks &matriks_b) {
   return tambah_matriks(this, &matriks_b);

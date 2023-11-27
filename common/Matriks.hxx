@@ -24,6 +24,9 @@ public:
   Matriks translate_matriks(T x, T y);
   Matriks scale_matriks_2d(T x, T y);
   Matriks rotate_matriks_2d(T rad);
+  Matriks mirror_matriks_x();
+  Matriks mirror_matriks_y();
+  Matriks mirror_matriks_d();
 
   // Operator Overloads
   Matriks<T> operator+(Matriks<T> &matriks_b);
