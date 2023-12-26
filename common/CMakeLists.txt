@@ -19,3 +19,5 @@ add_library(dda dda.cxx)
 add_library(bresenham bresenham.cxx)
 
 add_library(parse_args parse_args.cxx)
+
+add_library(degs_to_rads degs_to_rads.cxx)
