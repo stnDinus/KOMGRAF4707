@@ -1,4 +1,5 @@
 #include "bresenham.hxx"
+#include <cmath>
 
 using namespace std;
 

@@ -1,6 +1,6 @@
-#import "draw_points.hxx"
-#import "lib/bresenham.hxx"
-#import <iostream>
+#include "draw_points.hxx"
+#include "lib/bresenham.hxx"
+#include <iostream>
 
 using namespace std;
 

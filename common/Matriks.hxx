@@ -1,9 +1,7 @@
 #pragma once
 
-#include "new_rand.hxx"
 #include <GL/gl.h>
-#include <iostream>
-#include <math.h>
+#include <vector>
 
 template <typename T> class Matriks {
 public:

@@ -1,4 +1,6 @@
 #include "Matriks.hxx"
+#include <cmath>
+#include <iostream>
 
 template <typename T> Matriks2x2<T> invert_matriks(Matriks2x2<T> *input) {
   double determinan = 1. / (input->arr_2d[0][0] * input->arr_2d[1][1] -

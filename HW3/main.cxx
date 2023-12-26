@@ -1,5 +1,6 @@
 #include "draw_points.hxx"
 #include "lib/dda.hxx"
+#include <iostream>
 
 using namespace std;
 

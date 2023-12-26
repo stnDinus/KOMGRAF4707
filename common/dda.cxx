@@ -1,4 +1,5 @@
 #include "dda.hxx"
+#include <cstdlib>
 
 using namespace std;
 

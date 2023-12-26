@@ -3,7 +3,11 @@
 #include "Matriks.hxx"
 #include "bresenham.hxx"
 #include "dda.hxx"
+#include <cmath>
+#include <iostream>
 #include <unordered_map>
+
+using namespace std;
 
 int main(int argc, char *argv[]) {
   unordered_map<string, GLfloat> args; // nilai-nilai default:

@@ -1,7 +1,6 @@
 #pragma once
 
 #include <GL/gl.h>
-#include <cstdlib>
 #include <vector>
 
 /**

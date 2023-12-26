@@ -1,4 +1,7 @@
 #include "./Matriks.hxx"
+#include "new_rand.hxx"
+#include <iostream>
+#include <math.h>
 
 // Constructors
 template <typename T> Matriks<T>::Matriks(int dimensi_y, int dimensi_x) {

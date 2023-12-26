@@ -1,4 +1,9 @@
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include <iostream>
+
 #include "draw_points.hxx"
+#include "loadShaders.hxx"
 
 using namespace std;
 
