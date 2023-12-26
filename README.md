@@ -22,6 +22,7 @@
 7. HW7: Transformasi matriks NIM + mirroring
 8. UTS: Implementasi UTS
 9. HW8: Clipping, implementasi OpenGL
+10. Transformasi3D: Transformasi matriks 3 dimensi
 
 ---
 
