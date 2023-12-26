@@ -22,3 +22,10 @@
 7. HW7: Transformasi matriks NIM + mirroring
 8. UTS: Implementasi UTS
 9. HW8: Clipping, implementasi OpenGL
+
+---
+
+### Catatan
+- Belum di uji coba dalam OS selain linux, setiap dependency seharusnya bersifat cross-platform.
+- Disarankan membuat subdirectory `build` dalam masing-masing directory tugas (`HWX`) untuk membuat tugas.
+- Untuk menjalankan tugas berkaitan `OpenGL`, pastikan `SHADERS_DIR` terdefinisi saat menjalankan (runtime). Inisialisasikan dengan alamat directory `common` pada respository ini untuk menggunakan shaders bawaan. (e.g. `SHADERS_DIR=../../common ./HW8`, jika menjalankan dari subdirectory `build` dalam `HW8`)
