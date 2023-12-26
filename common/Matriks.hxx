@@ -32,6 +32,10 @@ public:
   Matriks rotate_matriks_3d_x(T rad);
   Matriks rotate_matriks_3d_y(T rad);
   Matriks rotate_matriks_3d_z(T rad);
+  Matriks mirror_matriks_3d_x();
+  Matriks mirror_matriks_3d_y();
+  Matriks mirror_matriks_3d_z();
+
   // Operator Overloads
   Matriks<T> operator+(Matriks<T> &matriks_b);
   Matriks<T> operator-(Matriks<T> &matriks_b);
