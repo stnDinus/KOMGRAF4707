@@ -31,6 +31,7 @@ public:
   Matriks scale_matriks_3d(T x, T y, T z);
   Matriks rotate_matriks_3d_x(T rad);
   Matriks rotate_matriks_3d_y(T rad);
+  Matriks rotate_matriks_3d_z(T rad);
   // Operator Overloads
   Matriks<T> operator+(Matriks<T> &matriks_b);
   Matriks<T> operator-(Matriks<T> &matriks_b);
