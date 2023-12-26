@@ -17,3 +17,5 @@ target_link_libraries(draw_points GLEW OpenGL::GL glfw)
 add_library(dda dda.cxx)
 
 add_library(bresenham bresenham.cxx)
+
+add_library(parse_args parse_args.cxx)
