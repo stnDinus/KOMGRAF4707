@@ -28,6 +28,7 @@ public:
 
   // untuk matriks posisi 3 dimensi + 1 dimensi homogen
   Matriks translate_matriks_3d(T x, T y, T z);
+  Matriks scale_matriks_3d(T x, T y, T z);
   // Operator Overloads
   Matriks<T> operator+(Matriks<T> &matriks_b);
   Matriks<T> operator-(Matriks<T> &matriks_b);
