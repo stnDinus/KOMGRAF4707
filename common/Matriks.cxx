@@ -253,6 +253,32 @@ template <typename T> Matriks<T> Matriks<T>::rotate_matriks_3d_x(T rad) {
   });
   return matriks_perkalian * *this;
 };
+
+template <typename T> Matriks<T> Matriks<T>::rotate_matriks_3d_y(T rad) {
+  Matriks<T> matriks_perkalian(4, 4);
+  matriks_perkalian.from_vec(std::vector<T>{
+      static_cast<T>(cos(rad)),      //
+      0,                             //
+      static_cast<T>(sin(rad)) * -1, //
+      0,                             //
+
+      0, //
+      1, //
+      0, //
+      0, //
+
+      static_cast<T>(sin(rad)), //
+      0,                        //
+      static_cast<T>(cos(rad)), //
+      0,                        //
+
+      0, //
+      0, //
+      0, //
+      1, //
+  });
+  return matriks_perkalian * *this;
+}
 // Operator Overloads
 template <typename T> Matriks<T> Matriks<T>::operator+(Matriks &matriks_b) {
   return tambah_matriks(this, &matriks_b);
